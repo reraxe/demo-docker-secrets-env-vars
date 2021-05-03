@@ -2,7 +2,7 @@ FROM php:7.4.3-fpm-alpine
 
 RUN apk add --no-cache libzip-dev bash
 
-WORKDIR /var/www/html
+VOLUME /var/www/html
 
 COPY index.php /var/www/html/index.php
 COPY docker-php-entrypoint /usr/local/bin/docker-php-entrypoint
