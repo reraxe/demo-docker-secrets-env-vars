@@ -21,7 +21,7 @@ file_env() {
 	unset "$fileVar"
 }
 
-file_env "MY_PASSWORD_SECRET"
+file_env "DOCKER_SECRET_ID"
 
 # first arg is `-f` or `--some-option`
 if [ "${1#-}" != "$1" ]; then
