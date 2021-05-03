@@ -4,10 +4,10 @@ RUN apk add --no-cache libzip-dev bash
 
 VOLUME /var/www/html
 
-COPY mongodb.php /var/www/html/mongodb.php
-COPY mongodb-entrypoint /usr/local/bin/mongodb-entrypoint
+COPY mongodburi.php /var/www/html/mongodburi.php
+COPY mongodburi-entrypoint /usr/local/bin/mongodburi-entrypoint
 
-RUN chmod +x /usr/local/bin/mongodb-entrypoint
+RUN chmod +x /usr/local/bin/mongodburi-entrypoint
 
-ENTRYPOINT ["mongodb-entrypoint"]
+ENTRYPOINT ["mongodburi-entrypoint"]
 CMD [ "php-fpm", "--allow-to-run-as-root", "--nodaemonize" ]
