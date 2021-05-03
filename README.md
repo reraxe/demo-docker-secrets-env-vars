@@ -1,6 +1,9 @@
 # Demo of how to add `_FILE` into into an enviroment variable in docker secrets (Docker Swarm Mode)
-## Usage
-This repo contains an example of how to change `MONGODB_URI` to expose `MONGODB_URI_FILE` in docker secret as an environment variable. This is named throughout the repo as:
+## Use Case
+Not to expose the Connection String URI Format of MongoDB in docker compose -https://docs.mongodb.com/manual/reference/connection-string/#connection-string-uri-format
+
+This repo contains an example of how to change `MONGODB_URI` to expose `MONGODB_URI_FILE` instead in docker secret as an environment variable.
+This is named throughout the repo as:
 ```
 MONGODB_URI_FILE
 ```
