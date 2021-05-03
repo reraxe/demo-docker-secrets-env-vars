@@ -30,7 +30,7 @@ docker-compose build
 
 Deploy stack and check logs
 ```bash
-docker stack deploy -c docker-compose.yaml secrets --prune
+docker stack deploy -c docker-compose.yml secrets --prune
 docker service logs secrets_php -f
 ```
 
