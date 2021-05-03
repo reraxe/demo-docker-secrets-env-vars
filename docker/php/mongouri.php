@@ -1,3 +1,3 @@
 <?php
 
-var_dump($_ENV['DOCKER_SECRET_ID']);
+var_dump($_ENV['MONGODB_URI']);
