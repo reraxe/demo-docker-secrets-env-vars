@@ -21,7 +21,7 @@ file_env() {
 	unset "$fileVar"
 }
 
-file_env "DOCKER_SECRET_ID"
+file_env "MONGODB_URI"
 
 # first arg is `-f` or `--some-option`
 if [ "${1#-}" != "$1" ]; then
