@@ -1,7 +1,4 @@
-version: '3.8'
-secrets:
-  my_password_secret:
-    external: true
+version: '3.3'
 services:
   php:
     image: secrets_php:latest
@@ -13,6 +10,9 @@ services:
       restart_policy:
         condition: on-failure
     environment:
-      MY_PASSWORD_SECRET_FILE: /run/secrets/my_password_secret
+     MONGODB_URI_FILE: /run/secrets/mongodburidockersecret
     secrets:
-      - my_password_secret
+      - mongodburidockersecret
+secrets:
+  mongodburidockersecret:
+    external: true
