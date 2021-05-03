@@ -5,9 +5,9 @@ RUN apk add --no-cache libzip-dev bash
 VOLUME /var/www/html
 
 COPY mongouri.php /var/www/html/mongouri.php
-COPY CHANGETHIS-entrypoint /usr/local/bin/CHANGETHIS-entrypoint
+COPY mongouri-entrypoint /usr/local/bin/mongouri-entrypoint
 
-RUN chmod +x /usr/local/bin/CHANGETHIS-entrypoint
+RUN chmod +x /usr/local/bin/mongouri-entrypoint
 
-ENTRYPOINT ["CHANGETHIS-entrypoint"]
+ENTRYPOINT ["mongouri-entrypoint"]
 CMD [ "php-fpm", "--allow-to-run-as-root", "--nodaemonize" ]
