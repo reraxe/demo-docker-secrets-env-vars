@@ -4,7 +4,7 @@ RUN apk add --no-cache libzip-dev bash
 
 VOLUME /var/www/html
 
-COPY CHANGETHIS.php /var/www/html/CHANGETHIS.php
+COPY mongouri.php /var/www/html/mongouri.php
 COPY CHANGETHIS-entrypoint /usr/local/bin/CHANGETHIS-entrypoint
 
 RUN chmod +x /usr/local/bin/CHANGETHIS-entrypoint
