@@ -1,4 +1,5 @@
 version: '3.3'
+
 services:
   php:
     image: secrets_php:latest
@@ -13,6 +14,7 @@ services:
      MONGODB_URI_FILE: /run/secrets/mongodburidockersecret
     secrets:
       - mongodburidockersecret
+
 secrets:
   mongodburidockersecret:
     external: true
