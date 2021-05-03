@@ -28,21 +28,4 @@ Build images first (For this demo, the images will not be loaded from an externa
 docker-compose build
 ```
 
-Deploy stack and check logs
-```bash
-docker stack deploy -c docker-compose.yml secrets --prune
-docker service logs secrets_php -f
-```
-
-Output should be something along the following lines
-```bash
-secrets_php.1.odzanf4ar9dw@docker-desktop    | string(21) "mongodb://mongodb0.example.com:27017"
-```
-This is because the php container command is set to only run the index.php file included in the folder.
-
-This file contains the following:
-```php
-<?php
-
-var_dump($_ENV['MONGODB_URI']);
-```
+If your Server and MongoDB can connect using `_FILE`, should should be all set in creating docker secret in an environment.
