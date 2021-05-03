@@ -36,7 +36,7 @@ docker service logs secrets_php -f
 
 Output should be something along the following lines
 ```bash
-secrets_php.1.odzanf4ar9dw@docker-desktop    | string(21) "mysupersecurepassword"
+secrets_php.1.odzanf4ar9dw@docker-desktop    | string(21) "mongodb://mongodb0.example.com:27017"
 ```
 This is because the php container command is set to only run the index.php file included in the folder.
 
