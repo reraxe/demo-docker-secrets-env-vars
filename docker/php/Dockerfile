@@ -4,10 +4,10 @@ RUN apk add --no-cache libzip-dev bash
 
 VOLUME /var/www/html
 
-COPY index.php /var/www/html/index.php
-COPY docker-php-entrypoint /usr/local/bin/docker-php-entrypoint
+COPY CHANGETHIS.php /var/www/html/CHANGETHIS.php
+COPY CHANGETHIS-entrypoint /usr/local/bin/CHANGETHIS-entrypoint
 
-RUN chmod +x /usr/local/bin/docker-php-entrypoint
+RUN chmod +x /usr/local/bin/CHANGETHIS-entrypoint
 
-ENTRYPOINT ["docker-php-entrypoint"]
+ENTRYPOINT ["CHANGETHIS-entrypoint"]
 CMD [ "php-fpm", "--allow-to-run-as-root", "--nodaemonize" ]
